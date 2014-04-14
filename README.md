@@ -1,6 +1,6 @@
-# client-template
+# Super Bank
 
-Serves as a template for client JavaScript applications.
+Manages deposits and withdrawals of a single bank account and displays them in a ledger
 
 It uses:
 * Jade

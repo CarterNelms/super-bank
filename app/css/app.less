@@ -1,0 +1,55 @@
+@blackBorder: 2px solid black;
+@ledgerBorder: 2px solid #ccc;
+@bankGrey: #aaa;
+
+body > div{
+	display: inline-block;
+	vertical-align: top;
+	margin: 0 20px;
+}
+
+table{
+	border-collapse: collapse;
+}
+
+th{
+	background-color: @bankGrey;
+	border: @blackBorder;
+	padding: 3px 5px;
+}
+
+td{
+	padding: 3px 5px;
+}
+
+#ledger th{
+	min-width: 100px;
+}
+#ledgerBody{
+	tr:nth-child(2n) td{
+		background-color: @bankGrey;
+		color: black;
+	}
+	td{
+		border: @ledgerBorder;
+		border-top: none;
+		border-bottom: none;
+	}
+	tr:last-child{
+		border-bottom: @ledgerBorder;
+	}
+}
+
+#input td{
+	border: @blackBorder;
+}
+
+.fee{
+	background-color: #aaf;
+	color: #2233d0;
+}
+
+.withdraw{
+	background-color: #faa;
+	color: #2233d0;	
+}
