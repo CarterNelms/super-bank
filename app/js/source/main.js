@@ -86,10 +86,14 @@
 			numStr += '0';
 		}
 
-		if(num < 0)
+		var orderOfMag = numStr.length - 3;
+		for(var i = 1; i <= Math.floor((orderOfMag - 1)/3); ++i)
 		{
-			numStr = '(' + numStr + ')';
+			var commaIndex = orderOfMag - 3 * i;
+			numStr = numStr.substring(0, commaIndex) + ',' + numStr.substring(commaIndex);
 		}
+
+		numStr = (num < 0) ? '(' + numStr + ')' : numStr + ' ';
 
 		return '$' + numStr;
 	}
